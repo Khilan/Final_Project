@@ -1,0 +1,81 @@
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/page.css" rel="stylesheet" type="text/css">
+
+
+<section data-ng-controller="WorksController">
+    
+    <div class="body-button">
+		<a href="/#!/" class="submit-button">Profile</a>
+	</div>
+    
+	<div class="body-hello">
+        <h1>New Course</h1>
+	</div>
+    <div class="body-signup">
+	<form data-ng-submit="create()" class="form-container" novalidate>
+        
+		<div class="form-title">
+			<label for title="company">Course Name</label>
+			<div>
+				<input type="text" class="form-field" data-ng-model="company" id="company"
+				placeholder="Course" required>
+			</div>
+		</div>
+     
+  <!--      <div class="form-title">
+			<label for title="city">City</label>
+			<div>
+				<input type="text" class="form-field" data-ng-model="city" id="city"
+				placeholder="City" required>
+			</div>
+		</div>
+        
+        <div class="form-title">
+			<label for title="country">Country</label>
+			<div>
+				<input type="text" class="form-field" data-ng-model="country" id="country"
+				placeholder="Country" required>
+			</div>
+		</div>
+        
+        <div class="form-title">
+			<label for title="position">Position</label>
+			<div>
+				<input type="text" class="form-field" data-ng-model="position" id="position"
+				placeholder="Position" required>
+			</div>
+		</div> -->
+        
+     <!--   <div class="form-title">
+			<label for title="startdate">Start Date</label>
+			<div>
+				<input type="date" class="form-field" data-ng-model="startdate" id="startdate"
+				placeholder="YYYY/MM/DD" required>
+			</div>
+		</div>
+        
+        <div class="form-title">
+			<label for title="enddate">End Date</label>
+			<div>
+				<input type="date" class="form-field" data-ng-model="enddate" id="enddate"
+				placeholder="YYYY/MM/DD" required>
+			</div>
+		</div>  -->
+        
+		<div class="form-title">
+			<label for title="details">Course Details</label>
+			<div>
+				<textarea data-ng-model="details" class="form-field" id="details"
+				cols="30" rows="10" placeholder="Course Details" required>
+				</textarea>
+			</div>
+		</div> 
+		<div class="submit-container">
+			<input type="submit" class="submit-button">
+		</div>
+		<div data-ng-show="error">
+			<strong data-ng-blind="error"></strong>
+		</div>
+	</form>
+    </div>
+</section>

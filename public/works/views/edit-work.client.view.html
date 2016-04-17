@@ -1,0 +1,78 @@
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/page.css" rel="stylesheet" type="text/css">
+
+<section data-ng-controller="WorksController" data-ng-init="findOne()">
+    
+    <div class="submit-container">
+		<a href="/#!/" class="submit-button">Profile</a>
+        <a href="/#!/works/{{work._id}}/" class="submit-button">View</a>
+	</div>
+    
+    <div class="body-hello">
+        <h1>Edit Work Experience</h1>
+    </div>
+    
+    <div class="body-signup">
+    <form data-ng-submit="update()" class="form-container" novalidate>
+        
+        <div class="form-title">
+            <label for="company">Course</label>
+            <div>
+                <input type="text" class="form-field" data-ng-model="work.company" id="company" placeholder="company" required>
+            </div>
+         </div>
+  <!--       
+         <div class="form-title">
+                <label for="city">City</label>
+             <div>
+                <input type="text" class="form-field" data-ng-model="work.city" id="city" placeholder="city" required>
+            </div>
+        </div>
+        
+        <div class="form-title">
+                <label for="country">Country</label>
+             <div>
+                <input type="text" class="form-field" data-ng-model="work.country" id="country" placeholder="country" required>
+            </div>
+        </div>
+        
+        <div class="form-title">
+                <label for="position">Position</label>
+             <div>
+                <input type="text" class="form-field" data-ng-model="work.position" id="position" placeholder="position" required>
+            </div>
+        </div>
+        
+        <div class="form-title">
+                <label for="startdate">Start Date</label>
+             <div>
+                <input type="text" class="form-field" data-ng-model="work.startdate" id="startdate" placeholder="startdate" required>
+            </div>
+        </div>
+        
+        <div class="form-title">
+                <label for="enddate">End Date</label>
+             <div>
+                <input type="text" class="form-field" data-ng-model="work.enddate" id="enddate" placeholder="enddate" required>
+            </div>
+        </div>  -->
+        
+        <div class="form-title">
+                <label for="details">Details</label>
+             <div>
+                <textarea class="form-field" data-ng-model="work.details" id="details" placeholder="details" cols="30" rows="10" required>
+                </textarea>
+            </div>
+        </div>
+         
+        
+        <div class="submit-container">
+            <input type="submit" class="submit-button" value="Update">
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+            </div>
+            </form>
+            <div class="body-signup">
+            </section>
+            

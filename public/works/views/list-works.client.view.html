@@ -1,0 +1,30 @@
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/page.css" rel="stylesheet" type="text/css">
+
+<section data-ng-controller="WorksController" data-ng-init="find()">
+	
+    <div class="body-button">
+		<a href="/#!/" class="submit-button">Profile</a>
+	</div>
+    
+    <div class="body-hello">
+        <h1>Courses</h1>
+	</div>
+    <ul>
+        <li data-ng-repeat="work in works">
+             <div data-ng-show="authentication.user._id == work.creator._id">
+            <a data-ng-href="#!/works/{{work._id}}" data-ng-bind="work.company" class="company"></a> <br>
+           
+            
+            <small data-ng-bind="work.created | date:'medium'"> </small>
+            <small>/</small>
+            <small data-ng-bind="work.creator.fullName"></small> <br> <br> <br>
+            
+            
+        </li>
+             </div>
+    </ul>
+    <div data-ng-hide="!works || works.length">
+        No courses yet, Why don't you <a href="/#!/works/create">Create one</a>?
+    </div>
+</section>

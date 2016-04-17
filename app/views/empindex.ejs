@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> <%= title %> </title>
+<link href="../css/page.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+ 
+    <section ng-view></section>
+    
+    <script>window.user = <%- user || 'null' %> </script>
+    
+    <script type="text/javascript" src="/lib/angular/angular.js">  </script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+    
+    <script type="text/javascript" src="/works/works.client.module.js"></script>
+    <script type="text/javascript" src="/works/controllers/works.client.controller.js"></script>
+    <script type="text/javascript" src="/works/services/works.client.service.js"></script>
+    <script type="text/javascript" src="/works/config/works.client.routes.js"></script>
+    
+    <script type="text/javascript" src="/example/example.client.module.js"></script>
+    <script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+    <script type="text/javascript" src="/example/config/empexample.client.routes.js"> </script>
+    
+    <script type="text/javascript" src="/users/users.client.module.js"> </script>
+    <script type="text/javascript" src="/users/services/authentication.client.service.js"> </script>
+    
+    <script type="text/javascript" src="/application.js"> </script>
+    
+</body>
+</html>

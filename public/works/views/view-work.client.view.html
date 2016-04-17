@@ -1,0 +1,91 @@
+<link href="../css/form.css" rel="stylesheet" type="text/css">
+<link href="../css/page.css" rel="stylesheet" type="text/css">
+
+<section data-ng-controller="WorksController" data-ng-init="findOne()">
+    
+    <div class="body-button">
+		<a href="/#!/" class="submit-button">Profile</a>
+	</div>
+    
+    <div class="body-hello">
+	    <h1 data-ng-bind="work.company"></h1>
+    </div>
+	
+    <div data-ng-show="authentication.user._id == work.creator._id" class="submit-container">
+		<a href="/#!/works/{{work._id}}/edit" class="submit-button">edit</a>
+		<a href="#" data-ng-click="delete();" class="submit-button">delete</a>
+	</div>
+    <table border="1">
+        <tr>
+            <td>
+                <p class="left"> Course </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.company" class="position"></p>
+            </td>
+        </tr>
+   <!--     
+        <tr>
+            <td>
+                <p class="left"> City </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.city" class="position"></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p class="left"> Country </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.country" class="position"></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p class="left"> Position </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.position" class="position"></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p class="left"> Start Date </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.startdate" class="position"></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <p class="left"> End Date </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.enddate" class="position"></p>
+            </td>
+        </tr>  -->
+        
+        <tr>
+            <td>
+                <p class="left"> Course Details </p>
+            </td>
+            <td>
+                <p data-ng-bind="work.details" class="position"></p>
+            </td>
+        </tr>
+        
+        
+    </table>
+	<small>
+		<em>Posted on</em>
+		<em data-ng-bind="work.created | date:'mediumDate'"></em>
+		<em>by</em>
+		<em data-ng-bind="work.creator.fullName"></em>
+	</small>
+	
+</section>
