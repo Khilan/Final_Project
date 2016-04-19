@@ -10,7 +10,7 @@ module.exports=function(app){
     
      app.route('/signin').get(students.renderSignin)
                         .post(passport.authenticate('local',{
-                            successRedirect: '/',
+                            successRedirect: '/student',
                             failureRedirect: '/signin',
                             failureFlash: true
                         }));     

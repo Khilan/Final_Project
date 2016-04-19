@@ -6,6 +6,7 @@ var WorkSchema = new Schema({
     company: String,
     city: String,
     country: String,
+    enroll: String,
     
     startdate:{
         type:Date

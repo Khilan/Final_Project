@@ -4,6 +4,9 @@ function ($routeProvider) {
     when('/',{
         templateUrl: 'example/views/welcome.html'
     }).
+    when('/student',{
+        templateUrl: 'example/views/example.client.view.html'
+    }).
     otherwise({
         redirectTo: '/'
     });

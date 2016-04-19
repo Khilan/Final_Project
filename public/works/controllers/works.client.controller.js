@@ -23,8 +23,11 @@ function($scope,$routeParams,$location,Authentication,Works){
 	
 	};
 	
-	//find and findOne
+	$scope.enroll=function(){
+		$scope.name = "Enroll";
+	}
 	
+	//find and findOne
 	$scope.find=function(){
 		$scope.works=Works.query();
 	};
